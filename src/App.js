@@ -9,8 +9,10 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/create/item' element={<CreationItemPage />} />
+        <Route path='/create/monster' element={<CreationMonsterPage />} />
         <Route path='/:user' element={<UserProfile />} />
-        <Route path='/:user/homebrew/:hbID' element={<UserItem />} />
+        <Route path='/:user/library' element={<UserItem />} />
       </Routes>
     </BrowserRouter>
   );
