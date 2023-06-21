@@ -4,22 +4,20 @@ import "./CreateMonster.scss"
 const CreateMonster = ({createdMonster, setCreatedMonster}) => {
     const [abilityScores, setAbilityScores] = useState({})
     let mod = 0;
-    // const abilityMods = {"1": , "2": , }
     console.log(createdMonster)
     console.log(abilityScores)
 const handleChange = (e) => {
     setCreatedMonster({
         ...createdMonster,
         [e.target.id]: e.target.value
-    })
+    });
 }
 const handleAbilityChange = (e) => {
     setAbilityScores( {
         ...abilityScores,
         [e.target.id]: e.target.value
-    })
+    });
     mod = Math.floor(((e.target.value) - 10) / 2)
-    
 }
     return (
         <form>
@@ -136,22 +134,40 @@ const handleAbilityChange = (e) => {
             <fieldset>
                 <legend>Ability Scores</legend>
                 <label htmlFor="str">
-                   STR <input type="text" id="str" value={abilityScores.str} onChange={e => handleAbilityChange(e)}/> +{mod}
+                   STR 
+                   <input type="text" id="str" value={abilityScores.str} 
+                   onChange={e => handleAbilityChange(e)}/> 
+                   {abilityScores.str? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="dex">
-                   DEX <input type="text" id="dex" value={abilityScores.dex} onChange={e => handleAbilityChange(e)}/> +{mod}
+                   DEX 
+                   <input type="text" id="dex" value={abilityScores.dex} 
+                   onChange={e => handleAbilityChange(e)}/> 
+                   {abilityScores.dex? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="con">
-                   CON <input type="text" id="con" value={abilityScores.con} onChange={e => handleAbilityChange(e)}/> +{mod}
+                   CON 
+                   <input type="text" id="con" value={abilityScores.con} 
+                   onChange={e => handleAbilityChange(e)}/> 
+                   {abilityScores.con? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="int">
-                   INT <input type="text" id="int" value={abilityScores.int} onChange={e => handleAbilityChange(e)}/> +{mod}
+                   INT 
+                   <input type="text" id="int" value={abilityScores.int} 
+                   onChange={e => handleAbilityChange(e)}/> 
+                   {abilityScores.int? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="wis">
-                   WIS <input type="text" id="wis" value={abilityScores.wis} onChange={e => handleAbilityChange(e)}/> +{mod}
+                   WIS 
+                   <input type="text" id="wis" value={abilityScores.wis} 
+                   onChange={e => handleAbilityChange(e)}/> 
+                   {abilityScores.wis? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="cha">
-                   CHA <input type="text" id="cha" value={abilityScores.cha} onChange={e => handleAbilityChange(e)}/> +{mod}
+                   CHA 
+                   <input type="text" id="cha" value={abilityScores.cha} 
+                    onChange={e => handleAbilityChange(e)}/> 
+                   {abilityScores.cha? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
             </fieldset>
             <div className="form__damage">
