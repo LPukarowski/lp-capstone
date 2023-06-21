@@ -1,0 +1,9 @@
+.header{
+    &__setup{
+        display: flex;
+        justify-content: center;
+    }
+    &__logo{
+        width: 100px;
+    }
+}

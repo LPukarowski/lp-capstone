@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import portalImg from '../../assets/images/portal logo.jpg'
+import './Header.scss'
 
 const Header = () => {
     return (
@@ -9,10 +11,10 @@ const Header = () => {
                 <NavLink to="/create/monster">Monster</NavLink>
                 <NavLink to="/:user">Your Library</NavLink>
             </div>
-            <div>
-                <img src='#' alt='capstone app logo' className="header__logo"/>
+            <div className="header__setup">
+                <img src={portalImg} alt='capstone app logo' className="header__logo"/>
                 <h1>WEBSITE NAME</h1>
-                <img src='#' alt='cpastone app logo' className="header__logo"/>
+                <img src={portalImg} alt='cpastone app logo' className="header__logo"/>
             </div>
         </header>
     );

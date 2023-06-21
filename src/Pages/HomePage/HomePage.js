@@ -14,7 +14,7 @@ const HomePage = () => {
                 <button>Start Your Library</button>
             </div>
         </section>
-        <section className="public__items">
+        <section className="public__tabs">
             
         </section>
         </>
