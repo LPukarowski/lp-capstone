@@ -1,0 +1,19 @@
+@use '../../partials/fonts.scss' as *;
+@use '../../partials/mixins.scss' as *;
+@use '../../partials/variables.scss' as *;
+
+.login-page{
+    background-image: url('../../assets/images/login_background3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__tabs{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,17 @@
+@use '../../partials/variables.scss' as *;
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #293744;
+    &__list{
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+        &-item{
+            margin: 0;
+            padding: .125rem 0;
+            color: $highlight_p;
+        }
+    }
+}

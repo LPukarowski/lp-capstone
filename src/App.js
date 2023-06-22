@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from './Components/Header/Header';
+import LoginPage from './Pages/LoginPage/LoginPage';
 import CreationMonsterPage from './Pages/CreationMonsterPage/CreationMonsterPage';
+import Footer from './Components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -30,12 +32,13 @@ function App() {
       <Header />
       <Routes>
         {/* <Route path='/' element={<HomePage />} /> */}
-        {/* <Route path='/login' element={<Login />} /> */}
+        <Route path='/login' element={<LoginPage />} />
         {/* <Route path='/create/item' element={<CreationItemPage />} /> */}
         <Route path='/create/monster' element={<CreationMonsterPage createdMonster={createdMonster} setCreatedMonster={setCreatedMonster}/>} />
         {/* <Route path='/:user' element={<UserProfile />} /> */}
         {/* <Route path='/:user/library' element={<UserItem />} /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -1,0 +1,19 @@
+@use '../../partials/variables.scss' as *;
+@use '../../partials/fonts.scss' as *;
+@use '../../partials/mixins.scss' as *;
+
+.login{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    &__input{
+        margin: 1rem;
+        padding: .2rem 0;
+        border-bottom: 1px solid $secondary;
+        &:focus{
+            border-color: transparent;
+            border-bottom: 1px solid $secondary;
+            outline: none;
+        }
+    }
+}

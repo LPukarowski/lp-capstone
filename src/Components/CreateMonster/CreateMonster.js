@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./CreateMonster.scss"
+import '../../partials/global.scss'
 
 const CreateMonster = ({createdMonster, setCreatedMonster}) => {
     const [abilityScores, setAbilityScores] = useState({})
@@ -20,7 +21,7 @@ const handleAbilityChange = (e) => {
     mod = Math.floor(((e.target.value) - 10) / 2)
 }
     return (
-        <form className="monster">
+        <form className="monster body-text" spellCheck='false'>
             <label htmlFor="monster_name">
             Monster Name:
             <input className='input' type="text" id="monster_name" value={createdMonster.monster_name} onChange={e => handleChange(e)}/>

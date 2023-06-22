@@ -1,0 +1,12 @@
+@use '../partials/fonts.scss' as *;
+
+.input{
+    background-color: transparent;
+    border: none;
+    text-shadow:  1px .5px #5A5A5A;
+    
+}
+
+body{
+    font-family: 'ShadowsIntoLightTwo';
+}

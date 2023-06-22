@@ -1,3 +1,6 @@
+@use '../../partials/fonts.scss' as *;
+@use '../../partials/mixins.scss' as *;
+@use '../../partials/variables.scss' as *;
 
 .monster{
     background-image: url('../../assets/images/images.jpg');
@@ -13,7 +16,4 @@
         display: flex;
         flex-wrap: wrap;
     }
-}
-.input{
-    background-color: transparent;
 }

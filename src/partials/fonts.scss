@@ -1,0 +1,31 @@
+@use './mixins.scss' as *;
+
+@font-face {
+    font-family: 'Boboiboy';
+    src: url(../assets/fonts/Boboiboy/BoboiboyDF.ttf)
+         format('truetype');
+    font-weight: 400;
+};
+
+@font-face {
+    font-family: 'ShadowsIntoLightTwo';
+    src: url(../assets/fonts/Shadows_Into_Light_Two/ShadowsIntoLightTwo-Regular.ttf) 
+         format('truetype');
+    font-weight: 400;
+};
+
+.body-text {
+    font-family: 'ShadowsIntoLightTwo';
+    @include font (0.8rem, 1.25rem, 400);
+    @include tablet {
+        @include font (0.9rem, 1.4rem, 400);
+    }
+}
+
+.page-header {
+    font-family: 'Boboiboy';
+    @include font (1.75rem, 2.25rem, 400);
+    @include tablet {
+        @include font (2rem, 2.5rem, 400);
+    }
+}

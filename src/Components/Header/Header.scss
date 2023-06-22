@@ -1,4 +1,7 @@
+@use '../../partials/variables.scss' as *;
+
 .header{
+    background: linear-gradient($secondary, #7EBBAB);
     &__navi{
         display: flex;
         justify-content: space-around;
@@ -8,6 +11,17 @@
         justify-content: center;
     }
     &__logo{
-        width: 100px;
+        height: 3.125rem;
+        padding: 1rem 0;
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        border-right: 1px solid $secondary;
+        border-bottom: 1px solid $secondary;
+        text-decoration: none;
+        color: black;
+        padding: .25rem 0;
     }
 }

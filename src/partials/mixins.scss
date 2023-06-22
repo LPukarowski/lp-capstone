@@ -1,0 +1,20 @@
+@use './variables.scss' as *;
+
+
+@mixin font ($font-size, $line-height, $font-weight) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
+
+@mixin tablet {
+    @media (min-width: $tablet-size) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-size) {
+        @content;
+    }
+}

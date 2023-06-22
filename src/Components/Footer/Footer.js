@@ -1,19 +1,20 @@
+import './Footer.scss'
 
 const Footer = () => {
     return (
-        <div>
+        <div className="footer">
             <div>
 
             </div>
-            <ul>
+            <ul className='footer__list'>
                 <li>
-                    <p>About</p>
+                    <p  className='footer__list-item'>About</p>
                 </li>
                 <li>
-                    <p>Basic Ruleset</p>
+                    <p  className='footer__list-item'>Basic Ruleset</p>
                 </li>
                 <li>
-                    <p></p>
+                    <p  className='footer__list-item'></p>
                 </li>
             </ul>
         </div>
