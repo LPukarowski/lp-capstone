@@ -1,6 +1,19 @@
-.form{
+
+.monster{
+    background-image: url('../../assets/images/images.jpg');
+    background-size: contain;
+    &__speed-senses{
+        display: flex;
+    }
+    &__ability-scores{
+        display: flex;
+        flex-direction: column;
+    }
     &__damage-types{
         display: flex;
         flex-wrap: wrap;
     }
+}
+.input{
+    background-color: transparent;
 }

@@ -20,13 +20,13 @@ const handleAbilityChange = (e) => {
     mod = Math.floor(((e.target.value) - 10) / 2)
 }
     return (
-        <form>
+        <form className="monster">
             <label htmlFor="monster_name">
             Monster Name:
-            <input type="text" id="monster_name" value={createdMonster.monster_name} onChange={e => handleChange(e)}/>
+            <input className='input' type="text" id="monster_name" value={createdMonster.monster_name} onChange={e => handleChange(e)}/>
             </label>
             <label htmlFor="monster_type">
-                <select id="monster_type" value={createdMonster.monster_type} onChange={e => handleChange(e)}>
+                <select className='input' id="monster_type" value={createdMonster.monster_type} onChange={e => handleChange(e)}>
                     <option value="">--Select Monster Type--</option>
                     <option value="aberration">Aberration</option>
                     <option value="beast">Beast</option>
@@ -45,7 +45,7 @@ const handleAbilityChange = (e) => {
                 </select>
             </label>
             <label htmlFor="monster_size">
-                <select id="monster_size" value={createdMonster.monster_size} onChange={e => handleChange(e)}>
+                <select className='input' id="monster_size" value={createdMonster.monster_size} onChange={e => handleChange(e)}>
                     <option value="">--Select Monster Size--</option>
                     <option value="tiny">Tiny</option>
                     <option value="small">Small</option>
@@ -57,122 +57,124 @@ const handleAbilityChange = (e) => {
             </label>
             <label htmlFor="challenge_rating">
                 Challenge Rating:
-                <input type="text" id="challenge_rating" value={createdMonster.challenge_rating} onChange={e => handleChange(e)}/>
+                <input className='input' type="text" id="challenge_rating" value={createdMonster.challenge_rating} onChange={e => handleChange(e)}/>
             </label>
             <label htmlFor="proficiency">
-                Proficiencies: +<input type="text" id="proficiency" value={createdMonster.proficiency} onChange={e => handleChange(e)}/>
+                Proficiencies: +<input className='input' type="text" id="proficiency" value={createdMonster.proficiency} onChange={e => handleChange(e)}/>
             </label>
             <label htmlFor="armour-class">
-                <input type="text" id="armour_class" value={createdMonster.armour_class} onChange={e => handleChange(e)}/> AC
+                <input className='input' type="text" id="armour_class" value={createdMonster.armour_class} onChange={e => handleChange(e)}/> AC
             </label>
             <label htmlFor="hitpoints">
-                <input type="text" id="hitpoints" value={createdMonster.hitpoints} onChange={e => handleChange(e)}/>
+                <input className='input' type="text" id="hitpoints" value={createdMonster.hitpoints} onChange={e => handleChange(e)}/>
             </label>
             <label>
-                Skills <input type="text" value={createdMonster.skills} />
+                Skills <input className='input' type="text" value={createdMonster.skills} />
             </label>
-            <fieldset>
-                <legend>Speed of monster</legend>
-                <div>
-                    <input type="checkbox" />
-                    <label htmlFor="speed">Speed
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="climbing-speed">Climbing speed
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="swim-speed">Swim speed
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="burrow-speed">Burrow speed
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="swim-speed">Flying speed
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Senses</legend>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="blightsight">Blindsight
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="darkvision">Darkvision
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="Tremorsense">Tremorsense
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-                <div>
-                    <input type="checkbox"/>
-                    <label htmlFor="truesight">Truesight
-                    <input type="text" /> in ft.
-                    </label>
-                </div>
-            </fieldset>
-            <fieldset>
+            <div className="monster__speed-senses">
+                <fieldset>
+                    <legend>Speed of monster</legend>
+                    <div>
+                        <input type="checkbox" checked/>
+                        <label htmlFor="speed">Speed
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox"/>
+                        <label htmlFor="climbing-speed">Climbing speed
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox"/>
+                        <label htmlFor="swim-speed">Swim speed
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox"/>
+                        <label htmlFor="burrow-speed">Burrow speed
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox"/>
+                        <label htmlFor="swim-speed">Flying speed
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Senses</legend>
+                    <div>
+                        <input className="#" type="checkbox"/>
+                        <label htmlFor="blightsight">Blindsight
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>
+                        <input className="#" type="checkbox"/>
+                        <label htmlFor="darkvision">Darkvision
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>className='input' 
+                        <input className="#" type="checkbox"/>
+                        <label htmlFor="Tremorsense">Tremorsense
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                    <div>
+                        <input className="#" type="checkbox"/>
+                        <label htmlFor="truesight">Truesight
+                        <input className='input' type="text" />ft.
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset className="monster__ability-scores">
                 <legend>Ability Scores</legend>
                 <label htmlFor="str">
                    STR 
-                   <input type="text" id="str" value={abilityScores.str} 
+                   <input className='input' type="text" id="str" value={abilityScores.str} 
                    onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.str? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="dex">
                    DEX 
-                   <input type="text" id="dex" value={abilityScores.dex} 
+                   <input className='input' type="text" id="dex" value={abilityScores.dex} 
                    onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.dex? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="con">
                    CON 
-                   <input type="text" id="con" value={abilityScores.con} 
+                   <input className='input' type="text" id="con" value={abilityScores.con} 
                    onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.con? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="int">
                    INT 
-                   <input type="text" id="int" value={abilityScores.int} 
+                   <input className='input' type="text" id="int" value={abilityScores.int} 
                    onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.int? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="wis">
                    WIS 
-                   <input type="text" id="wis" value={abilityScores.wis} 
+                   <input className='input' type="text" id="wis" value={abilityScores.wis} 
                    onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.wis? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="cha">
                    CHA 
-                   <input type="text" id="cha" value={abilityScores.cha} 
+                   <input className='input' type="text" id="cha" value={abilityScores.cha} 
                     onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.cha? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
             </fieldset>
-            <div className="form__damage">
+            <div className="monster__damage">
                 <h4>Damage Types</h4>
-                <div className="form__damage-types">
+                <div className="monster__damage-types">
                     <fieldset>
                         <legend>Physical</legend>
                         <div>
@@ -508,19 +510,19 @@ const handleAbilityChange = (e) => {
                 </div>
             </fieldset>
             <label htmlFor="special_abilities"> Special Abilities:
-                <textarea id="special_abilities" value={createdMonster.special_abilities} onChange={e => handleChange(e)}/>
+                <textarea className='input' id="special_abilities" value={createdMonster.special_abilities} onChange={e => handleChange(e)}/>
             </label>
             <label htmlFor="actions"> Actions:
-                <textarea id="actions" value={createdMonster.actions} onChange={e => handleChange(e)}/>
+                <textarea className='input' id="actions" value={createdMonster.actions} onChange={e => handleChange(e)}/>
             </label>
             <label htmlFor="is_legendary">
                 <input type="checkbox" id="is_legendary" onChange={e => handleChange(e)}/> Legendary Creature?
             </label>
             <label htmlFor="legendary_actions"> Legendary Actions:
-                <textarea id="legendary_actions" onChange={e => handleChange(e)} disabled/>
+                <textarea className='input' id="legendary_actions" onChange={e => handleChange(e)} disabled/>
             </label>
             <label htmlFor="description"> Description:
-                <textarea id="description" value={createdMonster.description} onChange={e => handleChange(e)}/>
+                <textarea className='input' id="description" value={createdMonster.description} onChange={e => handleChange(e)}/>
             </label>
 
             <div className="form__buttons">
