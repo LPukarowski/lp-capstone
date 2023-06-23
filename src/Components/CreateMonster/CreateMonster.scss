@@ -2,12 +2,104 @@
 @use '../../partials/mixins.scss' as *;
 @use '../../partials/variables.scss' as *;
 
+p{
+    margin: 0;
+    font-size: 2rem;
+}
 .monster{
     background-color: $background;
     background-size: contain;
     color: $highlight_p;
+    padding: 2rem;
+    &__info{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &__name{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        &-input{
+            text-align: center;
+            font-size: 2.5rem;
+            width: 100%;
+        }
+    }
+    &__cr{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__cr-prof{
+        display: flex;
+
+    }
+    &__challenge{
+        width: 2.5rem;
+        margin-right: 0.5rem;
+        &-input{
+        font-size: 2rem;
+        width: 2.5rem;
+        border: none
+        }
+    }
+    &__hitpoint{
+        width: 3.5rem;
+        &-input{
+        font-size: 2rem;
+        width: 3.5rem;
+        border: none
+        }
+    }
+    &__select{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+        &-input{
+            border: none;
+        }
+    }
     &__speed-senses{
         display: flex;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+    }
+    &__speeds{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__senses{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__ac{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: url('../../assets/images/shield-2-svgrepo-com.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 6.25rem;
+        height: 6.25rem;
+        &-label{
+            color: $secondary;
+        }
+        &-input{
+            border: none;
+            width: 5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+    &__modifier{
+        display: flex;
+        justify-content: space-between;
     }
     &__ability-scores{
         display: flex;
@@ -15,13 +107,59 @@
         flex-direction: column;
         width: 5rem;
     }
+    &__divider{
+        display: flex;
+        justify-content: space-around;
+
+    }
     &__ability{
+        font-size: 1.75rem;
         height: 2rem;
         width: 2rem;
         padding: 0 1rem;
     }
-    &__damage-types{
+    &__conditions{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
     }
+    &__skills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__damages{
+        padding-bottom: 1rem;
+        &-types{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-input{
+            margin-right: 1rem;
+        }
+    }
+    &__descriptions{
+        font-size: 1rem;
+        font-weight: 300;
+        color: $highlight_p;
+        resize: none;
+        width: 100%;
+        height: 10rem;
+    }
+    &__buttons{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+        &-input{
+            width: 10rem;
+        }
+    }
+}
+.input-length{
+    width: 50px;
+}
+
+fieldset{
+    border-radius: 5px;
 }

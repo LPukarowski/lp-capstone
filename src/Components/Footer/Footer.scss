@@ -9,6 +9,7 @@
         list-style-type: none;
         text-align: center;
         &-item{
+            font-size: 1.25rem;
             margin: 0;
             padding: .125rem 0;
             color: $highlight_p;
