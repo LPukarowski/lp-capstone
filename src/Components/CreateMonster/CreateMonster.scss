@@ -3,14 +3,22 @@
 @use '../../partials/variables.scss' as *;
 
 .monster{
-    background-image: url('../../assets/images/images.jpg');
+    background-color: $background;
     background-size: contain;
+    color: $highlight_p;
     &__speed-senses{
         display: flex;
     }
     &__ability-scores{
         display: flex;
+        justify-content: space-between;
         flex-direction: column;
+        width: 5rem;
+    }
+    &__ability{
+        height: 2rem;
+        width: 2rem;
+        padding: 0 1rem;
     }
     &__damage-types{
         display: flex;

@@ -76,31 +76,31 @@ const handleAbilityChange = (e) => {
                 <fieldset>
                     <legend>Speed of monster</legend>
                     <div>
-                        <input type="checkbox" checked/>
+                        <input type="checkbox" className="checkbox className='checkbox'" checked/>
                         <label htmlFor="speed">Speed
                         <input className='input' type="text" />ft.
                         </label>
                     </div>
                     <div>
-                        <input type="checkbox"/>
+                        <input type="checkbox" className="checkbox className='checkbox'"/>
                         <label htmlFor="climbing-speed">Climbing speed
                         <input className='input' type="text" />ft.
                         </label>
                     </div>
                     <div>
-                        <input type="checkbox"/>
+                        <input type="checkbox" className="checkbox className='checkbox'"/>
                         <label htmlFor="swim-speed">Swim speed
                         <input className='input' type="text" />ft.
                         </label>
                     </div>
                     <div>
-                        <input type="checkbox"/>
+                        <input type="checkbox" className="checkbox className='checkbox'"/>
                         <label htmlFor="burrow-speed">Burrow speed
                         <input className='input' type="text" />ft.
                         </label>
                     </div>
                     <div>
-                        <input type="checkbox"/>
+                        <input type="checkbox" className="checkbox className='checkbox'"/>
                         <label htmlFor="swim-speed">Flying speed
                         <input className='input' type="text" />ft.
                         </label>
@@ -120,7 +120,7 @@ const handleAbilityChange = (e) => {
                         <input className='input' type="text" />ft.
                         </label>
                     </div>
-                    <div>className='input' 
+                    <div> 
                         <input className="#" type="checkbox"/>
                         <label htmlFor="Tremorsense">Tremorsense
                         <input className='input' type="text" />ft.
@@ -134,43 +134,43 @@ const handleAbilityChange = (e) => {
                     </div>
                 </fieldset>
             </div>
-            <fieldset className="monster__ability-scores">
+            <fieldset className="monster__ability-scores ">
                 <legend>Ability Scores</legend>
                 <label htmlFor="str">
                    STR 
-                   <input className='input' type="text" id="str" value={abilityScores.str} 
+                   <input className='input monster__ability' type="text" id="str" value={abilityScores.str} 
                    onChange={e => handleAbilityChange(e)}/> 
                    {abilityScores.str? Math.floor(((abilityScores.str) - 10) / 2): 0}
                 </label>
                 <label htmlFor="dex">
                    DEX 
-                   <input className='input' type="text" id="dex" value={abilityScores.dex} 
+                   <input className='input monster__ability' type="text" id="dex" value={abilityScores.dex} 
                    onChange={e => handleAbilityChange(e)}/> 
-                   {abilityScores.dex? Math.floor(((abilityScores.str) - 10) / 2): 0}
+                   {abilityScores.dex? Math.floor(((abilityScores.dex) - 10) / 2): 0}
                 </label>
                 <label htmlFor="con">
                    CON 
-                   <input className='input' type="text" id="con" value={abilityScores.con} 
+                   <input className='input monster__ability' type="text" id="con" value={abilityScores.con} 
                    onChange={e => handleAbilityChange(e)}/> 
-                   {abilityScores.con? Math.floor(((abilityScores.str) - 10) / 2): 0}
+                   {abilityScores.con? Math.floor(((abilityScores.con) - 10) / 2): 0}
                 </label>
                 <label htmlFor="int">
                    INT 
-                   <input className='input' type="text" id="int" value={abilityScores.int} 
+                   <input className='input monster__ability' type="text" id="int" value={abilityScores.int} 
                    onChange={e => handleAbilityChange(e)}/> 
-                   {abilityScores.int? Math.floor(((abilityScores.str) - 10) / 2): 0}
+                   {abilityScores.int? Math.floor(((abilityScores.int) - 10) / 2): 0}
                 </label>
                 <label htmlFor="wis">
                    WIS 
-                   <input className='input' type="text" id="wis" value={abilityScores.wis} 
+                   <input className='input monster__ability' type="text" id="wis" value={abilityScores.wis} 
                    onChange={e => handleAbilityChange(e)}/> 
-                   {abilityScores.wis? Math.floor(((abilityScores.str) - 10) / 2): 0}
+                   {abilityScores.wis? Math.floor(((abilityScores.wis) - 10) / 2): 0}
                 </label>
                 <label htmlFor="cha">
                    CHA 
-                   <input className='input' type="text" id="cha" value={abilityScores.cha} 
+                   <input className='input monster__ability' type="text" id="cha" value={abilityScores.cha} 
                     onChange={e => handleAbilityChange(e)}/> 
-                   {abilityScores.cha? Math.floor(((abilityScores.str) - 10) / 2): 0}
+                   {abilityScores.cha? Math.floor(((abilityScores.cha) - 10) / 2): 0}
                 </label>
             </fieldset>
             <div className="monster__damage">
@@ -179,285 +179,285 @@ const handleAbilityChange = (e) => {
                     <fieldset>
                         <legend>Physical</legend>
                         <div>
-                            <input type="radio" name="physical"/>
+                            <input type="radio" className='checkbox' name="physical"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="physical"/>
+                            <input type="radio" className='checkbox' name="physical"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="physical" checked/>
+                            <input type="radio" className='checkbox' name="physical" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="physical"/>
+                            <input type="radio" className='checkbox' name="physical"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Slashing</legend>
                         <div>
-                            <input type="radio" name="slashing"/>
+                            <input type="radio" className='checkbox' name="slashing"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="slashing"/>
+                            <input type="radio" className='checkbox' name="slashing"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="slashing" checked/>
+                            <input type="radio" className='checkbox' name="slashing" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="slashing"/>
+                            <input type="radio" className='checkbox' name="slashing"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Piercing</legend>
                         <div>
-                            <input type="radio" name="piercing"/>
+                            <input type="radio" className='checkbox' name="piercing"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="piercing"/>
+                            <input type="radio" className='checkbox' name="piercing"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="piercing" checked/>
+                            <input type="radio" className='checkbox' name="piercing" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="piercing"/>
+                            <input type="radio" className='checkbox' name="piercing"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Bludgeoning</legend>
                         <div>
-                            <input type="radio" name="bludgeoning"/>
+                            <input type="radio" className='checkbox' name="bludgeoning"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="bludgeoning"/>
+                            <input type="radio" className='checkbox' name="bludgeoning"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="bludgeoning" checked/>
+                            <input type="radio" className='checkbox' name="bludgeoning" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="bludgeoning"/>
+                            <input type="radio" className='checkbox' name="bludgeoning"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Elemental</legend>
                         <div>
-                            <input type="radio" name="elemental"/>
+                            <input type="radio" className="checkbox" name="elemental"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="elemental"/>
+                            <input type="radio" className="checkbox" name="elemental"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="elemental" checked/>
+                            <input type="radio" className="checkbox" name="elemental" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="elemental"/>
+                            <input type="radio" className="checkbox" name="elemental"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Fire</legend>
                         <div>
-                            <input type="radio" name="fire"/>
+                            <input type="radio" className="checkbox" name="fire"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="fire"/>
+                            <input type="radio" className="checkbox" name="fire"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="fire" checked/>
+                            <input type="radio" className="checkbox" name="fire" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="fire"/>
+                            <input type="radio" className="checkbox" name="fire"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Cold</legend>
                         <div>
-                            <input type="radio" name="cold"/>
+                            <input type="radio" className="checkbox" name="cold"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="cold"/>
+                            <input type="radio" className="checkbox" name="cold"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="cold" checked/>
+                            <input type="radio" className="checkbox" name="cold" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="cold"/>
+                            <input type="radio" className="checkbox" name="cold"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Lightning</legend>
                         <div>
-                            <input type="radio" name="lightning"/>
+                            <input type="radio" className="checkbox" name="lightning"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="lightning"/>
+                            <input type="radio" className='checkbox' name="lightning"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="lightning" checked/>
+                            <input type="radio" className='checkbox' name="lightning" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="lightning"/>
+                            <input type="radio" className='checkbox' name="lightning"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Thunder</legend>
                         <div>
-                            <input type="radio" name="thunder"/>
+                            <input type="radio" className='checkbox' name="thunder"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="thunder"/>
+                            <input type="radio" className='checkbox' name="thunder"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="thunder" checked/>
+                            <input type="radio" className='checkbox' name="thunder" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="thunder"/>
+                            <input type="radio" className='checkbox' name="thunder"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Acid</legend>
                         <div>
-                            <input type="radio" name="acid"/>
+                            <input type="radio" className='checkbox' name="acid"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="acid"/>
+                            <input type="radio" className='checkbox' name="acid"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="acid" checked/>
+                            <input type="radio" className='checkbox' name="acid" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="acid"/>
+                            <input type="radio" className='checkbox' name="acid"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Poison</legend>
                         <div>
-                            <input type="radio" name="poison"/>
+                            <input type="radio" className='checkbox' name="poison"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="poison"/>
+                            <input type="radio" className='checkbox' name="poison"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="poison" checked/>
+                            <input type="radio" className='checkbox' name="poison" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="poison"/>
+                            <input type="radio" className='checkbox' name="poison"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Force</legend>
                         <div>
-                            <input type="radio" name="force"/>
+                            <input type="radio" className='checkbox' name="force"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="force"/>
+                            <input type="radio" className='checkbox' name="force"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="force" checked/>
+                            <input type="radio" className='checkbox' name="force" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="force"/>
+                            <input type="radio" className='checkbox' name="force"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Psychic</legend>
                         <div>
-                            <input type="radio" name="psychic"/>
+                            <input type="radio" className='checkbox' name="psychic"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="psychic"/>
+                            <input type="radio" className='checkbox' name="psychic"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="psychic" checked/>
+                            <input type="radio" className='checkbox' name="psychic" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="psychic"/>
+                            <input type="radio" className='checkbox' name="psychic"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Radiant</legend>
                         <div>
-                            <input type="radio" name="radiant"/>
+                            <input type="radio" className='checkbox' name="radiant"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="radiant"/>
+                            <input type="radio" className='checkbox' name="radiant"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="radiant" checked/>
+                            <input type="radio" className='checkbox' name="radiant" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="radiant"/>
+                            <input type="radio" className='checkbox' name="radiant"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Necrotic</legend>
                         <div>
-                            <input type="radio" name="necrotic"/>
+                            <input type="radio" className='checkbox' name="necrotic"/>
                             <label>Immune</label>
                         </div>
                         <div>
-                            <input type="radio" name="necrotic"/>
+                            <input type="radio" className='checkbox' name="necrotic"/>
                             <label>Resistant</label>
                         </div>
                         <div>
-                            <input type="radio" name="necrotic" checked/>
+                            <input type="radio" className='checkbox' name="necrotic" checked/>
                             <label>Normal</label>
                         </div>
                         <div>
-                            <input type="radio" name="necrotic"/>
+                            <input type="radio" className='checkbox' name="necrotic"/>
                             <label>Vulnerable</label>
                         </div>
                     </fieldset>
@@ -466,47 +466,47 @@ const handleAbilityChange = (e) => {
             <fieldset>
                 <legend>Condition Immunities</legend>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Blinded</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Charmed</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Deafened</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Frightened</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Grappled</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Paralyzed</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Petrified</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Poisoned</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Prone</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Restrained</label>
                 </div>
                 <div>
-                    <input type="checkbox"/>
+                    <input type="checkbox" className='checkbox'/>
                     <label>Stunned</label>
                 </div>
             </fieldset>
@@ -517,7 +517,7 @@ const handleAbilityChange = (e) => {
                 <textarea className='input' id="actions" value={createdMonster.actions} onChange={e => handleChange(e)}/>
             </label>
             <label htmlFor="is_legendary">
-                <input type="checkbox" id="is_legendary" onChange={e => handleChange(e)}/> Legendary Creature?
+                <input type="checkbox" id="is_legendary" className="checkbox" onChange={e => handleChange(e)}/> Legendary Creature?
             </label>
             <label htmlFor="legendary_actions"> Legendary Actions:
                 <textarea className='input' id="legendary_actions" onChange={e => handleChange(e)} disabled/>

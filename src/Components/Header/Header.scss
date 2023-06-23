@@ -1,7 +1,7 @@
 @use '../../partials/variables.scss' as *;
 
 .header{
-    background: linear-gradient($secondary, #7EBBAB);
+    background-color: $background;
     &__navi{
         display: flex;
         justify-content: space-around;
@@ -18,10 +18,10 @@
         display: flex;
         justify-content: center;
         flex-grow: 1;
-        border-right: 1px solid $secondary;
-        border-bottom: 1px solid $secondary;
+        border-right: 1px solid $highlight_p;
+        border-bottom: 1px solid $highlight_p;
         text-decoration: none;
-        color: black;
+        color: $secondary;
         padding: .25rem 0;
     }
 }

@@ -11,6 +11,7 @@ const LoginForm = () => {
             <label name="password">Password:
                 <input type='password'id="password" className='input login__input'/> 
             </label> 
+            <button className='button'>Login</button>
         </form>
         </>
     );

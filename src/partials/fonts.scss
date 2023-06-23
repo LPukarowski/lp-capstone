@@ -1,31 +1,36 @@
 @use './mixins.scss' as *;
 
 @font-face {
-    font-family: 'Boboiboy';
-    src: url(../assets/fonts/Boboiboy/BoboiboyDF.ttf)
+    font-family: 'Averia Serif Libre';
+    src: url(../assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf)
          format('truetype');
     font-weight: 400;
 };
-
 @font-face {
-    font-family: 'ShadowsIntoLightTwo';
-    src: url(../assets/fonts/Shadows_Into_Light_Two/ShadowsIntoLightTwo-Regular.ttf) 
+    font-family: 'Averia Serif Libre';
+    src: url(../assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf)
          format('truetype');
-    font-weight: 400;
+    font-weight: 600;
+};
+@font-face {
+    font-family: 'Averia Serif Libre';
+    src: url(../assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf)
+         format('truetype');
+    font-weight: 300;
 };
 
 .body-text {
-    font-family: 'ShadowsIntoLightTwo';
-    @include font (0.8rem, 1.25rem, 400);
+    font-family: 'Averia Serif Libre';
+    @include font (1rem, 1.25rem, 400);
     @include tablet {
-        @include font (0.9rem, 1.4rem, 400);
+        @include font (1.25rem, 1.4rem, 400);
     }
 }
 
 .page-header {
-    font-family: 'Boboiboy';
-    @include font (1.75rem, 2.25rem, 400);
+    font-family: 'Averia Serif Libre';
+    @include font (1.75rem, 2.25rem, 600);
     @include tablet {
-        @include font (2rem, 2.5rem, 400);
+        @include font (2rem, 2.5rem, 600);
     }
 }

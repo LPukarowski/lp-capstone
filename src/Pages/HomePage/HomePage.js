@@ -10,8 +10,8 @@ const HomePage = () => {
                 <p className="hero__web-desc"></p>
             </div>
             <div className="hero__cta-buttons">
-                <button>Sign Up Now!</button>
-                <button>Start Your Library</button>
+                <button className="button">Sign Up Now!</button>
+                <button className="button">Start Your Library</button>
             </div>
         </section>
         <section className="public__tabs">

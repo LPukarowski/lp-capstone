@@ -3,7 +3,7 @@
 .footer{
     display: flex;
     justify-content: center;
-    background-color: #293744;
+    background-color: $background;
     &__list{
         margin: 0;
         list-style-type: none;
