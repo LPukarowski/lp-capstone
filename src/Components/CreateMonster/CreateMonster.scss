@@ -34,13 +34,18 @@ p{
 
     }
     &__challenge{
-        width: 2.5rem;
+        width: 5rem;
         margin-right: 0.5rem;
         &-input{
         font-size: 2rem;
-        width: 2.5rem;
-        border: none
+        width: 5rem;
+        border: none;
+        text-align: center;
         }
+    }
+    &__prof{
+        padding: .5rem 0;
+        color: $secondary;
     }
     &__hitpoint{
         width: 3.5rem;
@@ -162,4 +167,5 @@ p{
 
 fieldset{
     border-radius: 5px;
+    border-color: $main;
 }

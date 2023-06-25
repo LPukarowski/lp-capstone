@@ -1,15 +1,35 @@
-
+import { Box, Tab, Tabs, Typography } from '@mui/material';
+import { useState } from 'react';
 import LoginForm from '../../Components/LoginForm/LoginForm';
+import SignUp from '../../Components/SignUp/SignUp';
 import './LoginPage.scss'
 
 const LoginPage = () => {
+    const [tabIndex, setTabIndex] = useState(0);
+    const handleTabChange = (event, newTabIndex) => {
+        setTabIndex(newTabIndex);
+    }
     return (
-        <div className='login-page'>
-            <div className='login-page__tabs'>
-                
-                <LoginForm />
-            </div>
-        </div>
+        <Box className='login-page'>
+            <Box className='login-page__tabs' sx={{width:'100%', display:'flex', justifyContent:'center'}}>
+                <Tabs value={tabIndex} onChange={handleTabChange}>
+                    <Tab label='Login'/>
+                    <Tab label='Sign Up'/>
+                </Tabs>  
+            </Box>
+            <Box>
+                {tabIndex === 0 && (
+                    <Box>
+                        <Typography><LoginForm /></Typography>
+                    </Box>
+                )}
+                {tabIndex === 1 && (
+                    <Box sx={{display: 'flex', justifyContent: 'space-evenly'}}>
+                        <Typography><SignUp /></Typography>
+                    </Box>
+                )}
+            </Box>
+        </Box>
     );
 };
 

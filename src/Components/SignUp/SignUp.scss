@@ -1,0 +1,14 @@
+@use '../../partials/variables.scss' as *;
+@use '../../partials/fonts.scss' as *;
+@use '../../partials/mixins.scss' as *;
+
+.signup{
+    &__label{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input{
+        width: 100%;
+
+    }
+}

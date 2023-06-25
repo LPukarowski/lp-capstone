@@ -1,31 +1,64 @@
-
+import { Box, TextField } from '@mui/material';
+import { useState } from 'react';
+import { ThemeProvider } from '@mui/system';
+import theme from '../Theme/Theme';
 
 const SignUp = () => {
+    const [newUser, setNewUser] = useState({});
     return (
-        <>
-            <h1 className='page-header'>Sign Up</h1>
-            <form className='login' spellCheck='false'>
-                <label name="first-name">First name:
-                    <input type="text" id="first-name" className="input login_input" />
-                </label>
-                <label name="last-name">Last name:
-                    <input type="text" id="last-name" className="input login_input" />
-                </label>
-                <label name="email">Email:
-                    <input type='email'id="email" className='input login__input'/> 
-                </label>
-                <label name="username">Username:
-                    <input type='text' id="username" className='input login__input'/>
-                </label>
-                <label name="password">Password:
-                    <input type='password'id="password" className='input login__input'/> 
-                </label>
-                <label name="confirm-password">Confirm Password:
-                    <input type='password'id="confirm-password" className='input login__input'/> 
-                </label>
+        <ThemeProvider theme={theme}>
+            <Box className='login signup' sx={{color:'whitesmoke'}} spellCheck='false' autoComplete="off">
+                <TextField
+                    required 
+                    label='First name' 
+                    id="standard-firstname-required" 
+                    placeholder='John'
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
+                <TextField
+                    required 
+                    label='Last name' 
+                    id="standard-lastname-required" 
+                    placeholder='Smith'
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
+                <TextField
+                    required 
+                    label='Username' 
+                    id="standard-user-required" 
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
+                <TextField
+                    required 
+                    label='Email' 
+                    id="standard-email-required"
+                    type='email'
+                    placeholder='johnsmith@gmail.com'
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
+                <TextField 
+                    required
+                    label='Password'
+                    id="standard-password-input"
+                    type='password'
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
+                <TextField 
+                    required
+                    label='Confirm Password'
+                    id="standard-confirm-password-input"
+                    type='password'
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
                 <button className="button">Sign Up Now</button>
-            </form> 
-        </>
+            </Box> 
+        </ThemeProvider>
     );
 };
 

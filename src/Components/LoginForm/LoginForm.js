@@ -1,18 +1,28 @@
+import { Box, TextField } from '@mui/material';
 import '../../partials/global.scss';
 import './LoginForm.scss'
 const LoginForm = () => {
     return (
         <>
-        <h1 className='page-header'>Login</h1>
-        <form className='login' spellCheck='false'>
-            <label name="username">Username:
-                <input type='text' id="username" className='input login__input'/>
-            </label>
-            <label name="password">Password:
-                <input type='password'id="password" className='input login__input'/> 
-            </label> 
+        <Box component='form' className='login' spellCheck='false' autoComplete='off'>
+            
+                <TextField
+                    required 
+                    label='Username' 
+                    id="standard-required" 
+                    variant='standard'
+                    sx={{mb:'2rem'}}
+                />
+            
+                <TextField 
+                    label='Password'
+                    id="standard-password-input"
+                    type='password'
+                    variant='standard'
+                    sx={{mb:'10rem'}}
+                /> 
             <button className='button'>Login</button>
-        </form>
+        </Box>
         </>
     );
 };

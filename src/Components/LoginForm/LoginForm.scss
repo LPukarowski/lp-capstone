@@ -6,15 +6,4 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    &__input{
-        margin: 1rem;
-        padding: .2rem 0;
-        border-bottom: 1px solid $main;
-        color: whitesmoke;
-        &:focus{
-            border-color: transparent;
-            border-bottom: 1px solid $main;
-            outline: none;
-        }
-    }
 }
