@@ -1,17 +1,18 @@
-import { Box, TextField } from '@mui/material';
+import { Box, TextField,} from '@mui/material';
 import '../../partials/global.scss';
 import './LoginForm.scss'
+
 const LoginForm = () => {
+
     return (
-        <>
-        <Box component='form' className='login' spellCheck='false' autoComplete='off'>
+        <Box component='form' className='login' sx={{}} spellCheck='false' autoComplete='off'>
             
                 <TextField
                     required 
                     label='Username' 
                     id="standard-required" 
                     variant='standard'
-                    sx={{mb:'2rem'}}
+                    sx={{mb:'2rem', color:'#090B17'}}
                 />
             
                 <TextField 
@@ -23,7 +24,6 @@ const LoginForm = () => {
                 /> 
             <button className='button'>Login</button>
         </Box>
-        </>
     );
 };
 

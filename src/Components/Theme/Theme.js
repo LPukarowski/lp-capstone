@@ -1,21 +1,21 @@
 import { createTheme } from '@mui/system';
-import palette from '../../partials/variables.scss';
 
-const theme = createTheme({
+
+const palette = createTheme({
     palette: {
         background: {
-            background: background,
+            background: '#090B17',
         },
         text: {
-            smoke: smoke,
-            h1: highlight_p,
-            h2: highlight_s,
+            smoke: '#f5f5f5',
+            h1: '#878787',
+            h2: '#7C7C7C',
         },
         main: {
-            prime: main,
-            second: secondary,
+            prime: '#1C1C1C',
+            second: '#AFA4EF',
         },
     },
 });
 
-export default theme;
+export default palette;
