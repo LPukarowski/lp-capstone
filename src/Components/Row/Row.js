@@ -1,5 +1,5 @@
 import { IconButton, TableCell, TableRow, Collapse } from "@mui/material";
-import { Box, Typography, Table, TableHead, TableBody } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { KeyboardArrowDownRounded, KeyboardArrowUpRounded } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -15,14 +15,11 @@ const Row = ({row}) => {
               size="small"
               onClick={() => setOpen(!open)}
             >
-              {open ? <KeyboardArrowUpRounded /> : <KeyboardArrowDownRounded />}
+              {open ? <KeyboardArrowUpRounded sx={{color: 'primary.light'}}/> : <KeyboardArrowDownRounded sx={{color: 'primary.light'}}/>}
             </IconButton>
           </TableCell>
-          <TableCell component="th" scope="row">
-            {row.name}
-          </TableCell>
-          <TableCell align="right">
-            <Link to={`/public/${row.id}`}>
+          <TableCell component="th" scope="row" align="center">
+          <Link to={`/public/${row.id}`} className="links">
                 {row.monster_name}
             </Link>
           </TableCell>

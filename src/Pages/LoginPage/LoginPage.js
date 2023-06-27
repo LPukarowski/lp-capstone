@@ -21,7 +21,7 @@ const LoginPage = ({setIsLoggedIn, setLoginError}) => {
                 </Box>
                 <Box>
                     {tabIndex === 0 && (
-                        <Box sx={{boxShadow: 10, borderRadius: '16px'}}>
+                        <Box >
                             <LoginForm setIsLoggedIn={setIsLoggedIn} setLoginError={setLoginError}/>
                         </Box>
                     )}

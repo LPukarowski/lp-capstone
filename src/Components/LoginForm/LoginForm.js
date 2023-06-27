@@ -34,7 +34,7 @@ console.log(loginAttempt)
         setLoginAttempt({...loginAttempt, [e.target.id]: e.target.value})
     }
     return (
-        <Box component='form' className='login' sx={{}} spellCheck='false' autoComplete='off'>
+        <Box component='form' className='login' sx={{boxShadow: 10, borderRadius: '16px'}} spellCheck='false' autoComplete='off'>
             
                 <TextField
                     required 

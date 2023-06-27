@@ -1,0 +1,27 @@
+@use '../../partials/fonts.scss' as *;
+@use '../../partials/mixins.scss' as *;
+@use '../../partials/variables.scss' as *;
+
+.homepage{
+    padding: 2rem;
+    background-color: $background;
+}
+.hero{
+    padding: 2rem 0;
+    &__div{
+        width: 75%;
+        padding-bottom: 2.5rem;
+    }
+    &__web-desc{
+        color: whitesmoke;
+        font-size: 1.25rem;
+    }
+}
+.public__tabs{
+    width: 100%;
+    color: whitesmoke;
+}
+.links{
+    text-decoration: none;
+    color: whitesmoke;
+}

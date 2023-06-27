@@ -1,5 +1,4 @@
-import { Box, TextField, ThemeProvider } from '@mui/material';
-import { createTheme } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import { useState } from 'react';
 import '../../partials/global.scss';
 
@@ -7,27 +6,9 @@ import '../../partials/global.scss';
 
 const SignUp = () => {
     const [newUser, setNewUser] = useState({});
-    const theme = createTheme({
-        palette: {
-            info: {
-                main: '#090B17',
-            },
-            text: {
-                primary: '#f5f5f5',
-                secondary: '#878787',
-                disabled: '#7C7C7C',
-            },
-            primary: {
-                main: '#1C1C1C',
-            },
-            secondary: {
-                main: '#AFA4EF',
-            },
-        },
-    });
+
     return (
-        <ThemeProvider theme={theme}>
-            <Box component='form' className='login signup' sx={{boxShadow: 10, borderRadius: '16px', color: 'text.primary', width: '100%'}} spellCheck='false' autoComplete="off">
+            <Box component='form' className='login signup' sx={{boxShadow: 10, borderRadius: '16px', width: '100%'}} spellCheck='false' autoComplete="off">
                 <TextField
                     required 
                     label='First name' 
@@ -79,7 +60,6 @@ const SignUp = () => {
                 />
                 <button className="button" variant='contained'>Sign Up Now</button>
             </Box>
-        </ThemeProvider> 
     );
 };
 
