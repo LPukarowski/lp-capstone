@@ -179,9 +179,9 @@ const modifier = (num) => {
                             <legend>Challenge Rating</legend>
                             <select className='input monster__challenge-input' id="challenge_rating" value={createdMonster.challenge_rating} onChange={e => handleChange(e)}>
                                 <option value="0">0</option>
-                                <option value="0.125">1/8</option>
-                                <option value="0.25">1/4</option>
-                                <option value="0.5">1/2</option>
+                                <option value="1/8">1/8</option>
+                                <option value="1/4">1/4</option>
+                                <option value="1/2">1/2</option>
                                 {options}
                             </select>    
                         </fieldset>

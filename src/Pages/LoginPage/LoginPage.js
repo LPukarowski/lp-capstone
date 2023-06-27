@@ -5,7 +5,7 @@ import SignUp from '../../Components/SignUp/SignUp';
 import './LoginPage.scss';
 import '../../partials/global.scss';
 
-const LoginPage = () => {
+const LoginPage = ({setIsLoggedIn, setLoginError}) => {
     const [tabIndex, setTabIndex] = useState(0);
     const handleTabChange = (event, newTabIndex) => {
         setTabIndex(newTabIndex);
@@ -22,12 +22,12 @@ const LoginPage = () => {
                 <Box>
                     {tabIndex === 0 && (
                         <Box sx={{boxShadow: 10, borderRadius: '16px'}}>
-                            <Typography><LoginForm /></Typography>
+                            <LoginForm setIsLoggedIn={setIsLoggedIn} setLoginError={setLoginError}/>
                         </Box>
                     )}
                     {tabIndex === 1 && (
                         <Box sx={{display: 'flex', justifyContent: 'space-evenly'}}>
-                            <Typography><SignUp /></Typography>
+                            <SignUp />
                         </Box>
                     )}
                 </Box>
