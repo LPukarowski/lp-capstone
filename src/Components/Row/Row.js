@@ -31,7 +31,7 @@ const Row = ({row}) => {
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={open} timeout="auto" unmountOnExit>
               <Box sx={{ margin: 1 }}>
-                <Typography variant="h6" gutterBottom component="div">
+                <Typography variant="h6" gutterBottom component="div" sx={{color: 'primary.light'}}>
                   Monster Details
                 </Typography>
                 <Typography>

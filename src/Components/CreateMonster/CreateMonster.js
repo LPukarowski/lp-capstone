@@ -13,6 +13,10 @@ const CreateMonster = ({createdMonster, setCreatedMonster}) => {
     const [damageResist, setDamageResist] = useState([]);
     const [damageVulnerable, setDamageVulnerable] = useState([]);
     console.log(monsterSpeed)
+
+    const handleSubmit = (e, bool) => {
+        
+    }
     const includesKey = (key, obj) => {
        const arr = Object.keys(obj);
         if (arr.includes(key)) {
@@ -763,8 +767,8 @@ const modifier = (num) => {
             </label>
 
             <div className="monster__buttons">
-                <button className="button monster__buttons-input">PUBLIC</button>
-                <button className="button monster__buttons-input">PRIVATE</button>
+                <button className="button monster__buttons-input" onClick={e => handleSubmit(e, true)}>PUBLIC</button>
+                <button className="button monster__buttons-input"onClick={e => handleSubmit(e, false)}>PRIVATE</button>
             </div>
         </form>
     );

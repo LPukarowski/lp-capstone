@@ -9,12 +9,32 @@
 .hero{
     padding: 2rem 0;
     &__div{
-        width: 75%;
-        padding-bottom: 2.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 3rem;
+        padding: 0 4rem 3rem 4rem;
+    }
+    &__welcome{
+        color: $secondary;
+        font-size: 3rem;
     }
     &__web-desc{
         color: whitesmoke;
         font-size: 1.25rem;
+        width: 85%;
+        padding-left: 3.5rem;
+    }
+    &__cta-buttons{
+        display: flex;
+        justify-content: center;
+    }
+    &__image{
+        height: 18.75rem;
+        width: 18.75rem;
+    }
+    &__button{
+        margin-left: 1rem;
+        padding: 0 1rem;
     }
 }
 .public__tabs{
