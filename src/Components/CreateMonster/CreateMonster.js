@@ -141,10 +141,12 @@ const modifier = (num) => {
     return (
         <form className="monster body-text" spellCheck='false' autoComplete="off">
             <div className="monster__info">
-                <label htmlFor="monster_name" className="monster__name">
-                Monster Name:
-                <input className='input monster__name-input' type="text" id="monster_name" value={createdMonster.monster_name} onChange={e => handleChange(e)}/>
-                </label>
+                <div className="monster__info-name">
+                    <label htmlFor="monster_name" className="monster__name">
+                    Monster Name:
+                    </label>
+                    <input className='input monster__name-input' type="text" id="monster_name" value={createdMonster.monster_name} onChange={e => handleChange(e)}/>
+                </div>
                 <div className="monster__select">
                     <label htmlFor="monster_type">
                         <select className='input monster__select-input' id="monster_type" value={createdMonster.monster_type} onChange={e => handleChange(e)}>

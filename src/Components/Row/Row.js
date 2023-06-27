@@ -18,21 +18,21 @@ const Row = ({row}) => {
               {open ? <KeyboardArrowUpRounded sx={{color: 'primary.light'}}/> : <KeyboardArrowDownRounded sx={{color: 'primary.light'}}/>}
             </IconButton>
           </TableCell>
-          <TableCell component="th" scope="row" align="center">
+          <TableCell component="th" scope="row" align="center" sx={{fontSize: '16px'}}>
           <Link to={`/public/${row.id}`} className="links">
                 {row.monster_name}
             </Link>
           </TableCell>
-          <TableCell align="right">{row.monster_type}</TableCell>
-          <TableCell align="right">{row.monster_cr}</TableCell>
-          <TableCell align="right">{row.user_name}</TableCell>
+          <TableCell align="left">{row.monster_type}</TableCell>
+          <TableCell align="left">{row.monster_cr}</TableCell>
+          <TableCell align="left">{row.user_name}</TableCell>
         </TableRow>
         <TableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={open} timeout="auto" unmountOnExit>
               <Box sx={{ margin: 1 }}>
-                <Typography variant="h6" gutterBottom component="div" sx={{color: 'primary.light'}}>
-                  Monster Details
+                <Typography variant="h5" gutterBottom component="div" sx={{color: 'primary.light'}}>
+                  Description
                 </Typography>
                 <Typography>
                     {row.description}

@@ -45,10 +45,10 @@ const HomePage = () => {
                 <TableHead>
                     <TableRow sx={{ '& > *': { borderBottom: 'none' }, color: '#F5F5F5' }}>
                         <TableCell align="right"></TableCell>
-                        <TableCell align="center"sx={{borderBottom: 'none' }}>Name</TableCell>
-                        <TableCell align="right">Type</TableCell>
-                        <TableCell align="right">CR</TableCell>
-                        <TableCell align="right">Creator</TableCell>
+                        <TableCell align="center"sx={{borderBottom: 'none', fontSize: '18px' }}>Name</TableCell>
+                        <TableCell align="left" sx={{borderBottom: 'none', fontSize: '18px' }}>Type</TableCell>
+                        <TableCell align="left" sx={{borderBottom: 'none', fontSize: '18px' }}>CR</TableCell>
+                        <TableCell align="left" sx={{borderBottom: 'none', fontSize: '18px'}}>Creator</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
