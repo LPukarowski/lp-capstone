@@ -7,7 +7,7 @@ import '../../partials/global.scss';
 
 const LoginPage = ({setIsLoggedIn, setLoginError}) => {
     const [tabIndex, setTabIndex] = useState(0);
-    const handleTabChange = (event, newTabIndex) => {
+    const handleTabChange = (_event, newTabIndex) => {
         setTabIndex(newTabIndex);
     }
 

@@ -1,6 +1,7 @@
 import { Box, TextField } from '@mui/material';
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router';
 import '../../partials/global.scss';
 import './LoginForm.scss'
 
@@ -9,6 +10,7 @@ const [loginAttempt, setLoginAttempt] = useState({
     user_name: "",
     password: ""
 })
+const navigate = useNavigate();
 console.log(loginAttempt)
     const handleLogin = (e) => {
         e.preventDefault();
@@ -29,6 +31,7 @@ console.log(loginAttempt)
             setLoginError(err)
             console.log(err)
         })
+        navigate('/library')
     }
     const handleChange = (e) => {
         setLoginAttempt({...loginAttempt, [e.target.id]: e.target.value})
