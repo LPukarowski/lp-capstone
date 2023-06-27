@@ -40,12 +40,12 @@ const HomePage = () => {
             </div>
         </section>
         <TableContainer className="public__tabs">
-            <Typography variant="h4" sx={{color: 'primary.light'}}>Public Library</Typography>
+            <Typography variant="h4" sx={{color: 'primary.light'}}>Public Beastiary</Typography>
             <Table aria-label="collapsible table">
                 <TableHead>
                     <TableRow sx={{ '& > *': { borderBottom: 'none' }, color: '#F5F5F5' }}>
-                        <TableCell align="right"></TableCell>
-                        <TableCell align="center"sx={{borderBottom: 'none', fontSize: '18px' }}>Name</TableCell>
+                        <TableCell align="right" sx={{borderBottom: 'none'}}></TableCell>
+                        <TableCell align="left"sx={{borderBottom: 'none', fontSize: '18px'}}>Name</TableCell>
                         <TableCell align="left" sx={{borderBottom: 'none', fontSize: '18px' }}>Type</TableCell>
                         <TableCell align="left" sx={{borderBottom: 'none', fontSize: '18px' }}>CR</TableCell>
                         <TableCell align="left" sx={{borderBottom: 'none', fontSize: '18px'}}>Creator</TableCell>

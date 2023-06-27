@@ -3,13 +3,13 @@ import { Box, Typography } from "@mui/material";
 import { KeyboardArrowDownRounded, KeyboardArrowUpRounded } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const Row = ({row}) => {
+
+const PersonalRow = ({monster}) => {
     const [open, setOpen] = useState(false);
-   console.log(row)
     return (
       <>
         <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-          <TableCell>
+        <TableCell>
             <IconButton
               aria-label="expand row"
               size="small"
@@ -18,14 +18,14 @@ const Row = ({row}) => {
               {open ? <KeyboardArrowUpRounded sx={{color: 'primary.light'}}/> : <KeyboardArrowDownRounded sx={{color: 'primary.light'}}/>}
             </IconButton>
           </TableCell>
-          <TableCell component="th" scope="row" align="left" sx={{fontSize: '18px'}}>
-          <Link to={`/public/${row.id}`} className="links">
-                {row.monster_name}
+          <TableCell component="th" scope="row" align="left" sx={{fontSize: '16px'}}>
+          <Link to={`/public/${monster.id}`} className="links">
+                {monster.monster_name}
             </Link>
           </TableCell>
-          <TableCell align="left">{row.monster_type}</TableCell>
-          <TableCell align="left">{row.monster_cr}</TableCell>
-          <TableCell align="left">{row.user_name}</TableCell>
+          <TableCell align="left">{monster.monster_type}</TableCell>
+          <TableCell align="left">{monster.monster_size}</TableCell>
+          <TableCell align="left">{monster.monster_cr}</TableCell>
         </TableRow>
         <TableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -35,7 +35,7 @@ const Row = ({row}) => {
                   Description
                 </Typography>
                 <Typography>
-                    {row.description}
+                    {monster.description}
                 </Typography>
               </Box>
             </Collapse>
@@ -45,4 +45,4 @@ const Row = ({row}) => {
     );
   }
 
-  export default Row;
+  export default PersonalRow;

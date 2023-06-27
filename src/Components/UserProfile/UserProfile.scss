@@ -1,0 +1,13 @@
+@use '../../partials/fonts.scss' as *;
+@use '../../partials/mixins.scss' as *;
+@use '../../partials/variables.scss' as *;
+
+
+.userpage{
+    background-color: $background;
+    margin: 0;
+    color: whitesmoke;
+    &__loading{
+        margin: 0;
+    }
+}

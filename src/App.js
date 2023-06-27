@@ -1,14 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Header from './Components/Header/Header';
 import HomePage from './Pages/HomePage/HomePage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import CreationMonsterPage from './Pages/CreationMonsterPage/CreationMonsterPage';
 import UserProfile from './Components/UserProfile/UserProfile';
 import Footer from './Components/Footer/Footer';
-import './App.scss';
 import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material';
+import './App.scss';
 
 function App() {
   const [createdMonster, setCreatedMonster] = useState({
@@ -53,7 +54,6 @@ function App() {
     },
 });
   useEffect(() => {
-    console.log(sessionStorage.getItem('token'))
     const loggedInUser = sessionStorage.getItem('token')
     if(loggedInUser) {
       const foundUser = loggedInUser;
@@ -61,6 +61,8 @@ function App() {
       setIsLoggedIn(true);
     };
   },[]);
+
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
@@ -70,7 +72,7 @@ function App() {
           <Route path='/login' element={<LoginPage setIsLoggedIn={setIsLoggedIn} setLoginError={setLoginError}/>} />
           {/* <Route path='/create/item' element={<CreationItemPage />} /> */}
           <Route path='/create/monster' element={<CreationMonsterPage isLoggedIn={isLoggedIn} createdMonster={createdMonster} setCreatedMonster={setCreatedMonster}/>} />
-          <Route path='/library' element={<UserProfile isLoggedIn={isLoggedIn}/>} />
+          <Route path='/library' element={<UserProfile isLoggedIn={isLoggedIn} user={user}/>} />
           {/* <Route path='/library/:name' element={<UserItem />} /> */}
         </Routes>
         <Footer />

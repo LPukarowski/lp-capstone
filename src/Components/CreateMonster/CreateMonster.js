@@ -12,7 +12,6 @@ const CreateMonster = ({createdMonster, setCreatedMonster}) => {
     const [damageImmune, setDamageImmune] = useState([]);
     const [damageResist, setDamageResist] = useState([]);
     const [damageVulnerable, setDamageVulnerable] = useState([]);
-    console.log(monsterSpeed)
 
     const handleSubmit = (e, bool) => {
         
