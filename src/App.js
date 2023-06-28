@@ -72,7 +72,7 @@ function App() {
           <Route path='/login' element={<LoginPage setIsLoggedIn={setIsLoggedIn} setLoginError={setLoginError}/>} />
           {/* <Route path='/create/item' element={<CreationItemPage />} /> */}
           <Route path='/create/monster' element={<CreationMonsterPage isLoggedIn={isLoggedIn} createdMonster={createdMonster} setCreatedMonster={setCreatedMonster}/>} />
-          <Route path='/library' element={<UserProfile isLoggedIn={isLoggedIn} user={user}/>} />
+          <Route path='/library' element={<UserProfile isLoggedIn={isLoggedIn} user={user} setUser={setUser} setIsLoggedIn={setIsLoggedIn}/>} />
           {/* <Route path='/library/:name' element={<UserItem />} /> */}
         </Routes>
         <Footer />

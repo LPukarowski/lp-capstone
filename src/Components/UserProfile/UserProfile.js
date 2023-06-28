@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { TableBody, TableContainer, Table, TableHead, TableRow, TableCell, Typography } from "@mui/material";
+import { useNavigate } from "react-router";
 import PersonalRow from "../Row/PersonalRow";
 import "./UserProfile.scss";
 
-const UserProfile = ({isLoggedIn, user}) => {
+const UserProfile = ({isLoggedIn, setIsLoggedIn, user, setUser}) => {
 const [populate, setPopulate] = useState(false)
 const [userLibrary, setUserLibrary] = useState([])
-
+const navigate = useNavigate();
+const handleLogout = () => {
+    sessionStorage.clear();
+    setUser(null);
+    setIsLoggedIn(false);
+    navigate('/');
+}
 
 useEffect(() => {
     const token = sessionStorage.token;
@@ -43,7 +50,7 @@ return (
 }
     return (
         <section className="userpage">
-        <TableContainer className="public__tabs">
+        <TableContainer className="public__tabs" sx={{height: '100vw'}}>
             <Typography variant="h4" sx={{color: 'primary.light'}}>Personal Beastiary</Typography>
             <Table aria-label="collapsible table">
                 <TableHead>
@@ -64,10 +71,13 @@ return (
                 </TableBody>
             </Table>
         </TableContainer>
-        <button className="button">Logout</button>
+        <div>
+            <button className="button" onClick={() => handleLogout()}>Logout</button>
+        </div>
         </section>
     );
 
 };
+
 
 export default UserProfile;

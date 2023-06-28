@@ -749,14 +749,46 @@ const modifier = (num) => {
                     </fieldset>
                 </div>
             </div>
-            <label htmlFor="special_abilities"> Special Abilities:
+            <label htmlFor="special_abilities">
+            <div className="tooltip"> Special Abilities ⓘ
+                <span className="tooltiptext">
+                    These would be characteristics that are likely to be relevant in combat encounters, add some explanation to ability. 
+                    Some examples of these would be Kobolds have a special ability called Pack Tactics: The kobold has advantage on an attack roll against a creature if at least one of the kobold's 
+                    allies is within 5 ft. of the creature and the ally isn't incapacitated. Having something like Psionics would have the description of spells cast by this creature 
+                    are cast with the mind, spells without gold value don't require components and aren't affected by silencing.  
+                </span>
+            </div>
                 <textarea className='input monster__descriptions' id="special_abilities" value={createdMonster.special_abilities} onChange={e => handleChange(e)}/>
             </label>
-            <label htmlFor="actions"> Actions:
+            <label htmlFor="actions">
+                <div className="tooltip"> Actions ⓘ
+                    <p className="tooltiptext">
+                        Actions is how it attacks in combat. Does the creature use it's teeth or claws to attack or can it carry equipment like a greataxe. Does it have the ability to
+                        cast spells what spells does it use? Can it attack multiple times in one action<br /><span>**Melee and Ranged Attacks**</span><br />The different conditions for 
+                        these attack are hit and miss, does something like poison or paralysis try to take effect when target is hit. Some effects for the Miss condition are when 
+                        a Harpy misses a claw attack, it lets loose a powerful screech, creating a windtunnel around it, any creature within 10ft of the Harpy makes a dexerity 
+                        saving throw, DC 14, if saving throw is failed creature is knocked back 5ft. <br /><span>**Ammunition**</span><br />A creature carries enough ammunition to 
+                        make it's ranged attacks. The standard amounts for ammunition is 2d4 pieces of ammunition for throwing weapons and 2d10 pieces of ammunition for projectile 
+                        weapons such as bows or crossbows. 
+                    </p>
+                    
+                </div>
                 <textarea className='input monster__descriptions' id="actions" value={createdMonster.actions} onChange={e => handleChange(e)}/>
             </label>
             <div>
                 <label htmlFor="is_legendary">
+                    <div className="tooltip">ⓘ
+                        <span className="tooltiptext">
+                            Is the creature considered legendary in the world? Legendary creatures have different conditions attached to them.<br/>**Legendary Actions**<br/>
+                            They can take a certain amount of special actions each round of combat. The legendary actions can only be used at the end of another creature's turn.
+                            <br/>**Legendary Creature's Lair**<br/>Lair actions are triggered on initiative count 20(losing all initiative ties). The legendary creature can trigger on one lair
+                            action at that time. An adult red dragon, might have a lair action such as lava pillars erupting out of the ground or walls.<br/>**Regional Effects**<br/> 
+                            These are more for the roleplaying part of the game, they have no effect on combat. This describes what happens when a legendary creature sets up their lair somewhere
+                            the landscape starts to change based on characteristics and nature of the creature. Regional effects can end abruptly or dissipate over time when the legendary creature
+                            dies.<br/>A legendary undead creature, the foliage of the near by forest starts to wilt. A constant thick fog is present for miles, the creatures that use to litter the 
+                            forest have disappeared and now more undead and monstrious creatures started to appear.       
+                        </span>
+                    </div>
                     <input type="checkbox" id="is_legendary" className="checkbox" value={createdMonster.is_legendary} onChange={e => checked? setChecked(false): setChecked(true)}/> Legendary Creature?
                 </label>
                 <label htmlFor="legendary_actions">
@@ -764,7 +796,13 @@ const modifier = (num) => {
                 </label>
             </div>
             <label htmlFor="description">
-                <textarea className='input monster__descriptions' id="description" placeholder="Description of Monster" value={createdMonster.description} onChange={e => handleChange(e)}/>
+                <div className="tooltip">Description ⓘ
+                    <span className="tooltiptext">
+                        What does your creature looks like? How does it acts in its natural habitat? What is the temperment of the creature(is it aggresive/territorial or maybe it's
+                        elusive rarely seen)?   
+                    </span>
+                </div>
+                <textarea className='input monster__descriptions' id="description" value={createdMonster.description} onChange={e => handleChange(e)}/>
             </label>
 
             <div className="monster__buttons">
@@ -776,3 +814,5 @@ const modifier = (num) => {
 };
 
 export default CreateMonster;
+
+            

@@ -36,7 +36,7 @@ const HomePage = () => {
             </div>
             <div className="hero__cta-buttons">
                 <Link to={"/login"}><button className="button hero__button">Login/Sign Up</button></Link>
-                <Link to={'/library'}><button className="button hero__button">Start Your Library</button></Link>
+                <Link to={'/create/monster'}><button className="button hero__button">Start Your Library</button></Link>
             </div>
         </section>
         <TableContainer className="public__tabs">

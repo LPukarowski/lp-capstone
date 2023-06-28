@@ -31,7 +31,7 @@ console.log(loginAttempt)
             setLoginError(err)
             console.log(err)
         })
-        navigate('/library')
+        navigate('/')
     }
     const handleChange = (e) => {
         setLoginAttempt({...loginAttempt, [e.target.id]: e.target.value})
