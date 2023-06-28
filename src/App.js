@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import Header from './Components/Header/Header';
 import HomePage from './Pages/HomePage/HomePage';
 import LoginPage from './Pages/LoginPage/LoginPage';
@@ -20,14 +20,14 @@ function App() {
     proficiency: "",
     armour_class: "",
     hitpoints: "",
-    skills: [],
+    skills: null,
     speed: [],
-    senses: [],
-    ability_scores: {str: "", dex: "", con: "", int: "", wis: "", cha: ""},
-    damage_vul: [],
-    damage_resist: [],
-    damage_immune: [],
-    condition_immune: [],
+    senses: null,
+    monster_ability_scores: {},
+    damage_vul: null,
+    damage_resist: null,
+    damage_immune: null,
+    condition_immune: null,
     special_abilities: "",
     actions: "",
     description: ""

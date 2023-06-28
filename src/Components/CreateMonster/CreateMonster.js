@@ -14,7 +14,17 @@ const CreateMonster = ({createdMonster, setCreatedMonster}) => {
     const [damageVulnerable, setDamageVulnerable] = useState([]);
 
     const handleSubmit = (e, bool) => {
-        
+        setCreatedMonster({
+            ...createdMonster,
+            monster_ability_scores: abilityScores,
+            monster_speeds: monsterSpeed,
+            monster_senses: monsterSense,
+            damage_immune: {damage_immune: [...damageImmune]},
+            damage_resist: {damage_resist: [...damageResist]},
+            damage_vulnerable: {damage_vul: [...damageVulnerable]},
+            condition_immune: {con_immune: [...monsterImmune]},
+            is_legendary: checked
+        })
     }
     const includesKey = (key, obj) => {
        const arr = Object.keys(obj);
